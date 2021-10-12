@@ -4,7 +4,7 @@ import { View, Text, Image, StyleSheet } from 'react-native';
 const navigation = [
   {
     text: 'Home',
-    img: { uri: 'https://cdn-icons-png.flaticon.com/512/609/609803.png' },
+    img: require('../../icon/home.png'),
   },
   {
     text: 'Search',
@@ -58,6 +58,7 @@ const styles = StyleSheet.create({
     marginTop: 4,
     color: 'ghostwhite',
     fontSize: 16,
+    fontWeight: '600'
   },
 });
 

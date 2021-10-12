@@ -1,9 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { Image, Text, View, StyleSheet } from 'react-native';
+import { Image, Text, View, StyleSheet, TouchableOpacity } from 'react-native';
+
+import MorningIcon from '../../icon/morning.png';
+import AfeternoonIcon from '../../icon/sun.png';
+import EveningIcon from '../../icon/evening.png';
+import NightIcon from '../../icon/night.png';
+import UserIcon from '../../icon/account.png';
 
 const Header = () => {
   const [days, setDays] = useState('Good Morning');
-  const [icon, setIcon] = useState(require('../../icon/night.png'));
+  const [icon, setIcon] = useState(MorningIcon);
 
   const date = new Date();
   const time = date.getHours();
@@ -11,13 +17,16 @@ const Header = () => {
   useEffect(() => {
     if (time < 12) {
       setDays('Good Morning');
-      setIcon(require('../../icon/morning.png'));
-    } else if (time < 18) {
+      setIcon(MorningIcon);
+    } else if (time < 17) {
       setDays('Good Afternoon');
-      setIcon(require('../../icon/sun.png'));
+      setIcon(AfeternoonIcon);
+    } else if (time < 18) {
+      setDays('Good Evening')
+      setIcon(EveningIcon);
     } else {
       setDays('Good Night');
-      setIcon(require('../../icon/night.png'));
+      setIcon(NightIcon);
     }
   }, [days, time]);
 
@@ -33,14 +42,9 @@ const Header = () => {
   return (
     <View style={styles.header}>
       <Welcome name="Ikhbal" />
-      <View>
-        <Image
-          style={{ width: 26, height: 26 }}
-          source={{
-            uri: 'https://cdn-icons-png.flaticon.com/512/1041/1041916.png',
-          }}
-        />
-      </View>
+      <TouchableOpacity onPress={() => alert('Account')}>
+        <Image style={{ width: 32, height: 32 }} source={UserIcon} />
+      </TouchableOpacity>
     </View>
   );
 };
