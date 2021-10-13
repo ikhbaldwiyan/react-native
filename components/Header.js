@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Image, Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 
-import MorningIcon from '../../icon/morning.png';
-import AfeternoonIcon from '../../icon/sun.png';
-import EveningIcon from '../../icon/evening.png';
-import NightIcon from '../../icon/night.png';
-import UserIcon from '../../icon/account.png';
+import MorningIcon from '../icon/morning.png';
+import AfeternoonIcon from '../icon/sun.png';
+import EveningIcon from '../icon/evening.png';
+import NightIcon from '../icon/night.png';
+import UserIcon from '../icon/account.png';
 
 const Header = () => {
   const [days, setDays] = useState('Good Morning');

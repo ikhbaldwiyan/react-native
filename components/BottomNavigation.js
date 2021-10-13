@@ -4,11 +4,11 @@ import { View, Text, Image, StyleSheet } from 'react-native';
 const navigation = [
   {
     text: 'Home',
-    img: require('../../icon/home.png'),
+    img: require('../icon/home.png'),
   },
   {
     text: 'Search',
-    img: require('../../icon/search.png'),
+    img: require('../icon/search.png'),
   },
   {
     text: 'Add',
@@ -18,11 +18,11 @@ const navigation = [
   },
   {
     text: 'Inbox',
-    img: require('../../icon/mail.png'),
+    img: require('../icon/mail.png'),
   },
   {
     text: 'Media',
-    img: require('../../icon/sound.png'),
+    img: require('../icon/sound.png'),
   },
 ];
 

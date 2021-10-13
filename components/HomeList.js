@@ -29,7 +29,7 @@ const HomeList = () => {
         <Text style={styles.title}>Moxie Media</Text>
         <Image
           style={styles.bannerImage}
-          source={require('../../icon/banner.png')}
+          source={require('../icon/banner.png')}
         />
       </View>
       <View style={{ marginTop: 15 }}>
