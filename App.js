@@ -1,21 +1,21 @@
 import React from 'react';
-import { ScrollView, View } from 'react-native';
+import 'react-native-gesture-handler';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
-import Header from './components/Header';
-import HomeList from './components/HomeList';
+import Home from './pages/Home';
 import BottomNavigation from './components/BottomNavigation';
 
 const App = () => {
+  const Stack = createStackNavigator();
+
   return (
-    <>
-      <ScrollView>
-        <View>
-          <Header />
-          <HomeList />
-        </View>
-      </ScrollView>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={Home} options={{headerShown: false}} />
+      </Stack.Navigator>
       <BottomNavigation />
-    </>
+    </NavigationContainer>
   );
 };
 
