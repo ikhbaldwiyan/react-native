@@ -6,33 +6,7 @@ import {
   ImageBackground,
   ScrollView,
 } from 'react-native';
-
-const article = [
-  {
-    title: 'Battlefield 2042',
-    img: {
-      uri: 'https://thelazy.media/wp-content/uploads/2021/10/k-1920x1080-featured-image.jpg.adapt_.crop191x100.1200w-1068x559.jpg',
-    },
-  },
-  {
-    title: 'Capcom akan fokus di PC ?',
-    img: {
-      uri: 'https://thelazy.media/wp-content/uploads/2021/10/8e091240f795fcb0e5d09eae11038e40_offers_banner_md_logo-1068x423.jpg',
-    },
-  },
-  {
-    title: 'Playstation 5',
-    img: {
-      uri: 'https://thelazy.media/wp-content/uploads/2021/10/FAokmekWQAIDYwO_1633245966128_1633246019165.png',
-    },
-  },
-  {
-    title: 'Honkai Impact',
-    img: {
-      uri: 'https://thelazy.media/wp-content/uploads/2021/10/March-7th-1068x601.png',
-    },
-  },
-];
+import FeaturedArticles from '../components/FeaturedArticles';
 
 const articleApi = [
   {
@@ -130,47 +104,14 @@ const articleApi = [
 const Article = ({ navigation }) => {
   return (
     <ScrollView>
-      <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
-        <View style={styles.container}>
-          {articleApi.map((item, idx) => (
-            <View key={idx}>
-              <View style={styles.card}>
-                <ImageBackground
-                  style={{ flex: 1 }}
-                  resizeMode="cover"
-                  imageStyle={{ borderRadius: 8 }}
-                  source={item.img}>
-                  <Text style={styles.tag}>{item.tag}</Text>
-                </ImageBackground>
-              </View>
-              <View>
-                <Text style={styles.title}>{item.title}</Text>
-                <Text style={{marginLeft: 20, marginTop: 5, color: 'ghostwhite'}}>{item.author}</Text>
-              </View>
-            </View>
-          ))}
-        </View>
-      </ScrollView>
-
+      <FeaturedArticles data={articleApi} />
       <View>
         <Text
-          style={{
-            marginTop: 15,
-            fontWeight: '500',
-            marginLeft: 15,
-            fontSize: 20,
-            color: '#2d283e',
-          }}>
+          style={styles.latestArticle}>
           Latest Article
         </Text>
         {articleApi.reverse().map((item, idx) => (
-          <View
-            key={idx}
-            style={{
-              flexDirection: 'row',
-              justifyContent: 'space-between',
-              marginVertical: 15,
-            }}>
+          <View key={idx} style={styles.container}>
             <View style={styles.articleCard}>
               <ImageBackground
                 style={{ flex: 1 }}
@@ -180,8 +121,8 @@ const Article = ({ navigation }) => {
               </ImageBackground>
             </View>
             <View>
-              <Text style={styles.latestTitle}>{item.title}</Text>
-              <Text style={{ marginTop: 3, maxWidth: 200, color: '#564f6f' }}>
+              <Text style={styles.title}>{item.title}</Text>
+              <Text style={styles.description}>
                 {item.desc}
               </Text>
               <Text
@@ -198,64 +139,42 @@ const Article = ({ navigation }) => {
 };
 
 const styles = StyleSheet.create({
+  latestArticle: {
+    marginTop: 15,
+    fontWeight: '500',
+    marginLeft: 16,
+    fontSize: 20,
+    color: '#2d283e',
+  },
   container: {
     flexDirection: 'row',
-    backgroundColor: '#564f6f',
-  },
-  heading: {
-    fontSize: 24,
-    marginLeft: 15,
-    marginTop: 10,
-    fontWeight: '500',
-    color: '#2d283e'
-  },
-  tag: {
-    color: 'white',
-    backgroundColor: '#2d283e',
-    width: 100,
-    padding: 2,
-    fontSize: 13,
-    borderRadius: 15,
-    borderTopLeftRadius: 0,
-    borderTopRightRadius: 0,
-    borderBottomLeftRadius: 0,
-    paddingBottom: 5
-  },
-  card: {
-    padding: 8,
-    width: 200,
-    height: 130,
-    backgroundColor: '#2d283e',
-    margin: 12,
-    borderRadius: 10,
-  },
-  articleCard: {
-    padding: 6,
-    width: 140,
-    height: 140,
-    backgroundColor: '#802bd1',
-    margin: 12,
-    borderRadius: 10,
+    justifyContent: 'space-between',
+    marginVertical: 15,
   },
   title: {
-    marginLeft: 20,
-    fontSize: 18,
-    color: 'white',
-    fontWeight: '400',
-    maxWidth: 200,
-    marginBottom: 5
-  },
-  latestTitle: {
     fontSize: 16,
     color: '#2d283e',
     fontWeight: '500',
     maxWidth: '60%',
     marginTop: 10,
   },
+  articleCard: {
+    padding: 6,
+    width: 140,
+    height: 140,
+    backgroundColor: '#802bd1',
+    margin: 15,
+    borderRadius: 10,
+  },
+  description: { 
+    marginTop: 3, 
+    maxWidth: 200, 
+    color: '#564f6f' 
+  },
   button: {
     color: 'white',
     backgroundColor: '#802bd1',
-    width: 100,
+    width: 90,
     padding: 10,
     borderRadius: 8,
     marginTop: 10,
