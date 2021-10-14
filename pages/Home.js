@@ -4,11 +4,11 @@ import { ScrollView } from 'react-native';
 import Header from '../components/Header';
 import HomeList from '../components/HomeList';
 
-const Home = () => {
+const Home = ({navigation}) => {
   return (
     <ScrollView>
       <Header />
-      <HomeList />
+      <HomeList navigation={navigation} />
     </ScrollView>
   );
 };

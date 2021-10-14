@@ -3,30 +3,30 @@ import { Image, Text, View, StyleSheet } from 'react-native';
 
 const menu = [
   {
-    text: 'Article',
-    img: { uri: 'https://cdn-icons-png.flaticon.com/512/2892/2892879.png' },
+    text: 'Articles',
+    img: { uri: 'https://cdn-icons.flaticon.com/png/512/3652/premium/3652927.png?token=exp=1634134304~hmac=6ed471c2080deefb93366db3b3a8fb05' },
   },
   {
     text: 'Images',
-    img: { uri: 'https://cdn-icons-png.flaticon.com/512/2659/2659360.png' },
+    img: { uri: 'https://cdn-icons-png.flaticon.com/512/342/342362.png' },
   },
   {
-    text: 'Repository',
+    text: 'News',
     img: {
-      uri: 'https://cdn-icons.flaticon.com/png/512/2822/premium/2822604.png?token=exp=1633967654~hmac=dc0a96ce556815c217357f6a92da537e',
+      uri: 'https://cdn-icons.flaticon.com/png/512/4961/premium/4961197.png?token=exp=1634135092~hmac=c41e6048a9b81d40ae8b012063fde442',
     },
   },
   {
     text: 'Website',
-    img: { uri: 'https://cdn-icons-png.flaticon.com/512/3719/3719350.png' },
+    img: { uri: 'https://cdn-icons-png.flaticon.com/512/5482/5482050.png' },
   },
 ];
 
-const HomeList = () => {
+const HomeList = ({ navigation }) => {
   return (
     <>
       <View style={styles.content}>
-        <Text style={styles.title}>Moxie Media</Text>
+        <Text style={styles.title}>Inzoid Media</Text>
         <Image
           style={styles.bannerImage}
           source={require('../icon/banner.png')}
@@ -38,7 +38,7 @@ const HomeList = () => {
             <Image style={styles.icon} source={menu.img} />
             <Text style={styles.text}>{menu.text}</Text>
             <Text
-              onPress={() => alert(`This is ${menu.text}`)}
+              onPress={() => navigation.navigate('Article')}
               style={styles.button}
             >
               See
@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
   },
   container: {
     padding: 15,
-    backgroundColor: '#564f6f',
+    backgroundColor: '#423d54',
     marginTop: 3,
     flexDirection: 'row',
     borderRadius: 15,

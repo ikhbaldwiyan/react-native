@@ -1,38 +1,40 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet } from 'react-native';
+import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 
-const navigation = [
+const menu = [
   {
     text: 'Home',
-    img: require('../icon/home.png'),
+    img: {uri: 'https://cdn-icons.flaticon.com/png/512/3274/premium/3274982.png?token=exp=1634134963~hmac=89fcd07d91a169b315fef873453086a4'},
   },
   {
-    text: 'Search',
-    img: require('../icon/search.png'),
-  },
-  {
-    text: 'Add',
+    text: 'Games',
     img: {
-      uri: 'https://cdn-icons.flaticon.com/png/512/1176/premium/1176381.png?token=exp=1633966605~hmac=bfe351c6acb9f406a99f03e802c7bd9e',
+      uri: 'https://cdn-icons-png.flaticon.com/512/4372/4372230.png',
     },
   },
   {
-    text: 'Inbox',
-    img: require('../icon/mail.png'),
+    text: 'Search',
+    img: {uri: 'https://cdn-icons-png.flaticon.com/512/3077/3077325.png'},
   },
   {
     text: 'Media',
-    img: require('../icon/sound.png'),
+    img: {uri: 'https://cdn-icons.flaticon.com/png/512/2518/premium/2518048.png?token=exp=1634134408~hmac=de7ff503a2e5df9e8ac3eab81d2d9e70'},
+  },
+  {
+    text: 'Inbox',
+    img:{uri: 'https://cdn-icons-png.flaticon.com/512/262/262591.png'},
   },
 ];
 
 const BottomNavigation = () => {
   return (
     <View style={styles.navigation}>
-      {navigation.map((menu, idx) => (
+      {menu.map((menu, idx) => (
         <View key={idx} style={styles.menu}>
-          <Image style={styles.icon} source={menu.img} />
-          <Text style={styles.text}>{menu.text}</Text>
+          <TouchableOpacity>
+            <Image style={styles.icon} source={menu.img} />
+            <Text style={styles.text}>{menu.text}</Text>
+          </TouchableOpacity>
         </View>
       ))}
     </View>
@@ -42,7 +44,7 @@ const BottomNavigation = () => {
 const styles = StyleSheet.create({
   navigation: {
     height: 84,
-    backgroundColor: '#802bb1',
+    backgroundColor: '#564f6f',
     flexDirection: 'row',
   },
   menu: {
