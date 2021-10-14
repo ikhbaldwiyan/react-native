@@ -4,25 +4,23 @@ import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 const menu = [
   {
     text: 'Home',
-    img: {uri: 'https://cdn-icons.flaticon.com/png/512/3274/premium/3274982.png?token=exp=1634134963~hmac=89fcd07d91a169b315fef873453086a4'},
+    img: require('../src/icon/nav/home.png'),
   },
   {
     text: 'Games',
-    img: {
-      uri: 'https://cdn-icons-png.flaticon.com/512/4372/4372230.png',
-    },
+    img: require('../src/icon/nav/games.png'),
   },
   {
     text: 'Search',
-    img: {uri: 'https://cdn-icons-png.flaticon.com/512/3077/3077325.png'},
+    img: require('../src/icon/nav/search.png'),
   },
   {
     text: 'Media',
-    img: {uri: 'https://cdn-icons.flaticon.com/png/512/2518/premium/2518048.png?token=exp=1634134408~hmac=de7ff503a2e5df9e8ac3eab81d2d9e70'},
+    img: require('../src/icon/nav/media.png'),
   },
   {
     text: 'Inbox',
-    img:{uri: 'https://cdn-icons-png.flaticon.com/512/262/262591.png'},
+    img: require('../src/icon/nav/inbox.png'),
   },
 ];
 
@@ -32,8 +30,10 @@ const BottomNavigation = () => {
       {menu.map((menu, idx) => (
         <View key={idx} style={styles.menu}>
           <TouchableOpacity>
-            <Image style={styles.icon} source={menu.img} />
-            <Text style={styles.text}>{menu.text}</Text>
+            <View style={styles.wrapper}>
+              <Image style={styles.icon} source={menu.img} />
+              <Text style={styles.text}>{menu.text}</Text>
+            </View>
           </TouchableOpacity>
         </View>
       ))}
@@ -60,7 +60,10 @@ const styles = StyleSheet.create({
     marginTop: 4,
     color: 'ghostwhite',
     fontSize: 16,
-    fontWeight: '600'
+    fontWeight: '600',
+  },
+  wrapper: {
+    alignItems: 'center',
   },
 });
 

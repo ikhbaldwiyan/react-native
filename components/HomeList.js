@@ -4,21 +4,19 @@ import { Image, Text, View, StyleSheet } from 'react-native';
 const menu = [
   {
     text: 'Articles',
-    img: { uri: 'https://cdn-icons.flaticon.com/png/512/3652/premium/3652927.png?token=exp=1634134304~hmac=6ed471c2080deefb93366db3b3a8fb05' },
+    img: require('../src/icon/home/articles.png'),
   },
   {
     text: 'Images',
-    img: { uri: 'https://cdn-icons-png.flaticon.com/512/342/342362.png' },
+    img: require('../src/icon/home/picture.png'),
   },
   {
     text: 'News',
-    img: {
-      uri: 'https://cdn-icons.flaticon.com/png/512/4961/premium/4961197.png?token=exp=1634135092~hmac=c41e6048a9b81d40ae8b012063fde442',
-    },
+    img: require('../src/icon/home/news.png'),
   },
   {
     text: 'Website',
-    img: { uri: 'https://cdn-icons-png.flaticon.com/512/5482/5482050.png' },
+    img: require('../src/icon/home/website.png')
   },
 ];
 
@@ -29,7 +27,7 @@ const HomeList = ({ navigation }) => {
         <Text style={styles.title}>Inzoid Media</Text>
         <Image
           style={styles.bannerImage}
-          source={require('../icon/banner.png')}
+          source={require('../src/icon/images/bro.png')}
         />
       </View>
       <View style={{ marginTop: 15 }}>
@@ -41,7 +39,7 @@ const HomeList = ({ navigation }) => {
               onPress={() => navigation.navigate('Article')}
               style={styles.button}
             >
-              See
+              Lihat
             </Text>
           </View>
         ))}
