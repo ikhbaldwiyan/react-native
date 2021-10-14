@@ -11,7 +11,9 @@ import FeaturedArticles from '../components/FeaturedArticles';
 const articleApi = [
   {
     title: 'BATTLEFIELD 2042 Berikan Bundle Cross-Gen!',
-    img: {uri: 'https://thelazy.media/wp-content/uploads/2021/10/k-1920x1080-featured-image.jpg.adapt_.crop191x100.1200w-1068x559.jpg'},
+    img: {
+      uri: 'https://thelazy.media/wp-content/uploads/2021/10/k-1920x1080-featured-image.jpg.adapt_.crop191x100.1200w-1068x559.jpg',
+    },
     author: 'Ikhbal Dwiyantoro',
     tag: 'Game News',
     time: 'October 13, 2021',
@@ -20,7 +22,9 @@ const articleApi = [
   },
   {
     title: 'Xbox Series X Edisi Nickelodeon All Star Brawl!',
-    img: {uri: 'https://thelazy.media/wp-content/uploads/2021/10/FAokmekWQAIDYwO_1633245966128_1633246019165.png'},
+    img: {
+      uri: 'https://thelazy.media/wp-content/uploads/2021/10/FAokmekWQAIDYwO_1633245966128_1633246019165.png',
+    },
     author: 'Inzoid Net',
     tag: 'Console',
     time: 'October 12, 2021',
@@ -29,7 +33,9 @@ const articleApi = [
   },
   {
     title: 'Arataki Itto dan Gorou Menjadi Bintang Utama di Genshin Impact 2.3',
-    img: {uri: 'https://thelazy.media/wp-content/uploads/2021/10/arataki-itto-header-1-150x150.jpg'},
+    img: {
+      uri: 'https://thelazy.media/wp-content/uploads/2021/10/arataki-itto-header-1-150x150.jpg',
+    },
     author: 'Martin Charis',
     tag: 'Game News',
     time: 'October 12, 2021',
@@ -38,7 +44,9 @@ const articleApi = [
   },
   {
     title: 'G2 Esports Kabarkan Perombakan Roster Besar Untuk Season Depan',
-    img: {uri: 'https://thelazy.media/wp-content/uploads/2021/10/1617008330831-150x150.jpg'},
+    img: {
+      uri: 'https://thelazy.media/wp-content/uploads/2021/10/1617008330831-150x150.jpg',
+    },
     author: 'Joshua Hadinata',
     tag: 'Esports',
     time: 'October 12, 2021',
@@ -47,7 +55,9 @@ const articleApi = [
   },
   {
     title: 'Marvel’s Avengers Datangkan Sistem “Pay-to-Win”',
-    img: {uri: 'https://thelazy.media/wp-content/uploads/2021/10/avengersheader-150x150.jpg'},
+    img: {
+      uri: 'https://thelazy.media/wp-content/uploads/2021/10/avengersheader-150x150.jpg',
+    },
     author: 'Aldy Wayong',
     tag: 'Game News',
     time: 'October 9, 2021',
@@ -56,7 +66,9 @@ const articleApi = [
   },
   {
     title: 'EA Pertimbangkan Ganti Nama FIFA?',
-    img: {uri: 'https://thelazy.media/wp-content/uploads/2021/10/sub-1_8fab89e-150x150.jpg'},
+    img: {
+      uri: 'https://thelazy.media/wp-content/uploads/2021/10/sub-1_8fab89e-150x150.jpg',
+    },
     author: 'Aldy Wayong',
     tag: 'Game News',
     time: 'October 8, 2021',
@@ -65,7 +77,9 @@ const articleApi = [
   },
   {
     title: 'Honkai: Star Rail Bukti miHoYo Bisa Menjajal Turn-Based RPG!',
-    img: {uri: 'https://thelazy.media/wp-content/uploads/2021/10/March-7th-150x150.png'},
+    img: {
+      uri: 'https://thelazy.media/wp-content/uploads/2021/10/March-7th-150x150.png',
+    },
     author: 'Martin Charis',
     tag: 'Game News',
     time: 'October 8, 2021',
@@ -74,7 +88,9 @@ const articleApi = [
   },
   {
     title: 'BATTLEFIELD 2042 Berikan Bundle Cross-Gen!',
-    img: {uri: 'https://thelazy.media/wp-content/uploads/2021/10/k-1920x1080-featured-image.jpg.adapt_.crop191x100.1200w-150x150.jpg'},
+    img: {
+      uri: 'https://thelazy.media/wp-content/uploads/2021/10/k-1920x1080-featured-image.jpg.adapt_.crop191x100.1200w-150x150.jpg',
+    },
     author: 'Aldy Wayong',
     tag: 'Game News',
     time: 'October 7, 2021',
@@ -83,7 +99,9 @@ const articleApi = [
   },
   {
     title: 'MPL Indonesia Menjadi Turnamen Paling Populer Di September 2021',
-    img: {uri: 'https://thelazy.media/wp-content/uploads/2021/10/3332939331586152771-150x150.jpg'},
+    img: {
+      uri: 'https://thelazy.media/wp-content/uploads/2021/10/3332939331586152771-150x150.jpg',
+    },
     author: 'Joshua Hadinata',
     tag: 'Esports',
     time: 'October 6, 2021',
@@ -91,13 +109,15 @@ const articleApi = [
     key: '2021/10/06/mpl-indonesia-populer',
   },
   {
-    title: 'Honkai: Star Rail Bukti miHoYo Bisa Menjajal Turn-Based RPG!',
-    img: {uri: 'https://thelazy.media/wp-content/uploads/2021/10/March-7th-150x150.png'},
+    title: 'Solusi Gaming Murah Di Zaman Sekarang MSI Bravo 15 B5DD-046ID',
+    img: {
+      uri: 'https://thelazy.media/wp-content/uploads/2021/09/Sequence-01.00_00_46_20.Still012.jpg',
+    },
     author: 'Martin Charis',
     tag: 'Game News',
     time: 'October 8, 2021',
     desc: 'Segala popularitas yang diraih Genshin Impact hingga kini tentunya menyumbangkan sejumlah besar visibilitas masyarakat akan suatu developer game yang memulai karir sebagai pengembang mobage, yaitu miHoYo. Seakan tidak...',
-    key: '2021/10/08/honkai-star-rail-bukti-mihoyo-bisa-menjajal-turn-based-rpg',
+    key: 'https://thelazy.media/wp-content/uploads/2021/09/Sequence-01.00_00_46_20.Still012.jpg',
   },
 ];
 
@@ -106,25 +126,28 @@ const Article = ({ navigation }) => {
     <ScrollView>
       <FeaturedArticles data={articleApi} />
       <View>
-        <Text
-          style={styles.latestArticle}>
-          Latest Article
-        </Text>
+        <Text style={styles.latestArticle}>Latest Article</Text>
         {articleApi.reverse().map((item, idx) => (
           <View key={idx} style={styles.container}>
-            <View style={styles.articleCard}>
-              <ImageBackground
-                style={{ flex: 1 }}
-                imageStyle={{ borderRadius: 8 }}
-                resizeMode="cover"
-                source={item.img}>
-              </ImageBackground>
+            <View>
+              <View style={styles.category}>
+                <Text style={styles.textCategory}>{item.tag}</Text>
+              </View>
+              <View style={styles.articleCard}>
+                <ImageBackground
+                  style={{ flex: 1 }}
+                  imageStyle={{ borderRadius: 8 }}
+                  resizeMode="cover"
+                  source={item.img}></ImageBackground>
+              </View>
+              <View style={styles.author}>
+                <Text style={styles.authorText}>{item.time}</Text>
+              </View>
             </View>
             <View>
               <Text style={styles.title}>{item.title}</Text>
-              <Text style={styles.description}>
-                {item.desc}
-              </Text>
+              <Text style={{marginVertical: 3, fontWeight: '500'}}>{item.author}</Text>
+              <Text style={styles.description}>{item.desc}</Text>
               <Text
                 onPress={() => navigation.navigate('Home')}
                 style={styles.button}>
@@ -155,28 +178,57 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: '#2d283e',
     fontWeight: '500',
-    maxWidth: '60%',
+    maxWidth: 200,
     marginTop: 10,
   },
   articleCard: {
     padding: 6,
     width: 140,
     height: 140,
-    backgroundColor: '#802bd1',
+    backgroundColor: '#564f6f',
     margin: 15,
-    borderRadius: 10,
+    marginTop: 4,
+    marginBottom: 4,
+    borderBottomStartRadius: 10,
+    borderBottomEndRadius: 10,
   },
-  description: { 
-    marginTop: 3, 
-    maxWidth: 200, 
-    color: '#564f6f' 
+  category: {
+    width: 140,
+    padding: 5,
+    marginLeft: 15, 
+    marginTop: 15,
+    backgroundColor: '#423d54' ,
+    color: 'white',
+    borderTopEndRadius: 15,
+  },
+  textCategory: {
+    color: 'white',
+    marginLeft: 5
+  },
+  author: {
+    width: 140,
+    padding: 5,
+    marginLeft: 15, 
+    backgroundColor: '#2d283e' ,
+    color: 'white',
+    borderRadius: 6,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  authorText: {
+    color: 'white',
+  },
+  description: {
+    marginTop: 3,
+    maxWidth: 200,
+    color: '#564f6f',
   },
   button: {
     color: 'white',
     backgroundColor: '#802bd1',
     width: 90,
     padding: 10,
-    borderRadius: 8,
+    borderRadius: 4,
     marginTop: 10,
     marginRight: 180,
   },

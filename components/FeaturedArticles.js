@@ -11,7 +11,7 @@ const FeaturedArticles = ({ data }) => {
   return (
     <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
       <View style={styles.container}>
-        {data.map((item, idx) => (
+        {data.reverse().map((item, idx) => (
           <View key={idx}>
             <View style={styles.card}>
               <ImageBackground
