@@ -5,7 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import Home from './pages/Home';
 import Article from './pages/Article';
-import BottomNavigation from './components/BottomNavigation';
+import SplashScreen from './pages/SplashScreen';
 
 const App = () => {
   const Stack = createStackNavigator();
@@ -13,6 +13,11 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+        <Stack.Screen
+          name="SplashScreen"
+          component={SplashScreen}
+          options={{ headerShown: false }}
+        />
         <Stack.Screen
           name="Home"
           component={Home}
@@ -28,7 +33,6 @@ const App = () => {
           }}
         />
       </Stack.Navigator>
-      <BottomNavigation />
     </NavigationContainer>
   );
 };

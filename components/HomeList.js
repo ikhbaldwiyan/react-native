@@ -1,5 +1,11 @@
 import React from 'react';
-import { Image, Text, View, StyleSheet } from 'react-native';
+import {
+  Image,
+  Text,
+  View,
+  StyleSheet,
+  TouchableOpacity,
+} from 'react-native';
 
 const menu = [
   {
@@ -16,7 +22,7 @@ const menu = [
   },
   {
     text: 'Website',
-    img: require('../src/icon/home/website.png')
+    img: require('../src/icon/home/website.png'),
   },
 ];
 
@@ -35,12 +41,9 @@ const HomeList = ({ navigation }) => {
           <View key={idx} style={styles.container}>
             <Image style={styles.icon} source={menu.img} />
             <Text style={styles.text}>{menu.text}</Text>
-            <Text
-              onPress={() => navigation.navigate('Article')}
-              style={styles.button}
-            >
-              Lihat
-            </Text>
+            <TouchableOpacity  onPress={() => navigation.navigate('Article')}>
+              <Text style={styles.button}>Lihat</Text>
+            </TouchableOpacity>
           </View>
         ))}
       </View>
@@ -62,10 +65,10 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#564f6f',
   },
-  bannerImage: { 
-    width: 280, 
-    height: 180, 
-    marginTop: 15 
+  bannerImage: {
+    width: 280,
+    height: 180,
+    marginTop: 15,
   },
   container: {
     padding: 15,
@@ -85,14 +88,14 @@ const styles = StyleSheet.create({
     fontSize: 23,
     marginLeft: 10,
     flex: 1,
-    fontWeight: '500'
+    fontWeight: '500',
   },
   button: {
     color: 'white',
-    backgroundColor: '#802bd1', 
+    backgroundColor: '#802bd1',
     padding: 10,
     borderRadius: 8,
-  }
+  },
 });
 
 export default HomeList;

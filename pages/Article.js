@@ -7,6 +7,7 @@ import {
   ScrollView,
 } from 'react-native';
 import FeaturedArticles from '../components/FeaturedArticles';
+import Layout from './Layout';
 
 const articleApi = [
   {
@@ -123,41 +124,43 @@ const articleApi = [
 
 const Article = ({ navigation }) => {
   return (
-    <ScrollView>
-      <FeaturedArticles data={articleApi} />
-      <View>
-        <Text style={styles.latestArticle}>Latest Article</Text>
-        {articleApi.reverse().map((item, idx) => (
-          <View key={idx} style={styles.container}>
-            <View>
-              <View style={styles.category}>
-                <Text style={styles.textCategory}>{item.tag}</Text>
+    <Layout>
+      <ScrollView>
+        <FeaturedArticles data={articleApi} />
+        <View>
+          <Text style={styles.latestArticle}>Latest Article</Text>
+          {articleApi.map((item, idx) => (
+            <View key={idx} style={styles.container}>
+              <View>
+                <View style={styles.category}>
+                  <Text style={styles.textCategory}>{item.tag}</Text>
+                </View>
+                <View style={styles.articleCard}>
+                  <ImageBackground
+                    style={{ flex: 1 }}
+                    imageStyle={{ borderRadius: 8 }}
+                    resizeMode="cover"
+                    source={item.img}></ImageBackground>
+                </View>
+                <View style={styles.author}>
+                  <Text style={styles.authorText}>{item.time}</Text>
+                </View>
               </View>
-              <View style={styles.articleCard}>
-                <ImageBackground
-                  style={{ flex: 1 }}
-                  imageStyle={{ borderRadius: 8 }}
-                  resizeMode="cover"
-                  source={item.img}></ImageBackground>
-              </View>
-              <View style={styles.author}>
-                <Text style={styles.authorText}>{item.time}</Text>
+              <View>
+                <Text style={styles.title}>{item.title}</Text>
+                <Text style={{marginVertical: 3, fontWeight: '500'}}>{item.author}</Text>
+                <Text style={styles.description}>{item.desc}</Text>
+                <Text
+                  onPress={() => navigation.navigate('Home')}
+                  style={styles.button}>
+                  Read More
+                </Text>
               </View>
             </View>
-            <View>
-              <Text style={styles.title}>{item.title}</Text>
-              <Text style={{marginVertical: 3, fontWeight: '500'}}>{item.author}</Text>
-              <Text style={styles.description}>{item.desc}</Text>
-              <Text
-                onPress={() => navigation.navigate('Home')}
-                style={styles.button}>
-                Read More
-              </Text>
-            </View>
-          </View>
-        ))}
-      </View>
-    </ScrollView>
+          ))}
+        </View>
+      </ScrollView>
+    </Layout>
   );
 };
 
