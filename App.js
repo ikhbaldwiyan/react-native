@@ -6,6 +6,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Home from './pages/Home';
 import Article from './pages/Article';
 import SplashScreen from './pages/SplashScreen';
+import Tech from './pages/Tech';
 
 const App = () => {
   const Stack = createStackNavigator();
@@ -28,6 +29,15 @@ const App = () => {
           component={Article}
           options={{
             title: 'Articles',
+            headerStyle: { backgroundColor: '#2D283e' },
+            headerTintColor: 'white',
+          }}
+        />
+        <Stack.Screen
+          name="Tech"
+          component={Tech}
+          options={{
+            title: 'Tech',
             headerStyle: { backgroundColor: '#2D283e' },
             headerTintColor: 'white',
           }}

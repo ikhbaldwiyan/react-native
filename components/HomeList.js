@@ -1,28 +1,26 @@
 import React from 'react';
-import {
-  Image,
-  Text,
-  View,
-  StyleSheet,
-  TouchableOpacity,
-} from 'react-native';
+import { Image, Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 
 const menu = [
   {
     text: 'Articles',
     img: require('../src/icon/home/articles.png'),
+    route: 'Article'
   },
   {
     text: 'Images',
     img: require('../src/icon/home/picture.png'),
+    route: 'Tech'
   },
   {
     text: 'News',
     img: require('../src/icon/home/news.png'),
+    route: 'Tech'
   },
   {
     text: 'Website',
     img: require('../src/icon/home/website.png'),
+    route: 'Tech'
   },
 ];
 
@@ -41,7 +39,7 @@ const HomeList = ({ navigation }) => {
           <View key={idx} style={styles.container}>
             <Image style={styles.icon} source={menu.img} />
             <Text style={styles.text}>{menu.text}</Text>
-            <TouchableOpacity  onPress={() => navigation.navigate('Article')}>
+            <TouchableOpacity  onPress={() => navigation.navigate(menu.route)}>
               <Text style={styles.button}>Lihat</Text>
             </TouchableOpacity>
           </View>
