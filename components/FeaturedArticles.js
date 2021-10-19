@@ -1,24 +1,18 @@
 import React from 'react';
-import {
-  StyleSheet,
-  Text,
-  View,
-  ImageBackground,
-  ScrollView,
-} from 'react-native';
+import { StyleSheet, Text, View, ImageBackground, ScrollView } from 'react-native';
 
 const FeaturedArticles = ({ data }) => {
   return (
     <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
       <View style={styles.container}>
-        {data.reverse().map((item, idx) => (
+        {data.map((item, idx) => (
           <View key={idx}>
             <View style={styles.card}>
               <ImageBackground
                 style={{ flex: 1 }}
                 resizeMode="cover"
                 imageStyle={{ borderRadius: 8 }}
-                source={item.img}>
+                source={{uri: item.thumb}}>
                 <Text style={styles.tag}>{item.tag}</Text>
               </ImageBackground>
             </View>
