@@ -8,9 +8,9 @@ const menu = [
     route: 'Article'
   },
   {
-    text: 'Images',
-    img: require('../src/icon/home/picture.png'),
-    route: 'Tech'
+    text: 'Games',
+    img: require('../src/icon/nav/games.png'),
+    route: 'Games'
   },
   {
     text: 'News',
@@ -20,7 +20,7 @@ const menu = [
   {
     text: 'Website',
     img: require('../src/icon/home/website.png'),
-    route: 'Tech'
+    route: ''
   },
 ];
 

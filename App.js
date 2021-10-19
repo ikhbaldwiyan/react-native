@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import Article from './pages/Article';
 import SplashScreen from './pages/SplashScreen';
 import Tech from './pages/Tech';
+import Games from './pages/Games';
 
 const App = () => {
   const Stack = createStackNavigator();
@@ -38,6 +39,15 @@ const App = () => {
           component={Tech}
           options={{
             title: 'Tech',
+            headerStyle: { backgroundColor: '#2D283e' },
+            headerTintColor: 'white',
+          }}
+        />
+        <Stack.Screen
+          name="Games"
+          component={Games}
+          options={{
+            title: 'Games',
             headerStyle: { backgroundColor: '#2D283e' },
             headerTintColor: 'white',
           }}

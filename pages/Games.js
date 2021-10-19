@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import ArticleList from '../components/ArticleList';
 
-const Article = ({ navigation }) => {
+const Games = ({ navigation }) => {
   const [article, setArticle] = useState([]);
   const [featuredArticles, setFeaturedArticles] = useState([]);
 
@@ -12,7 +12,7 @@ const Article = ({ navigation }) => {
     async function featuredArticles() {
       try {
         const response = await axios.get(
-          'https://the-lazy-media-api.vercel.app/api/search?search=gam',
+          'https://the-lazy-media-api.vercel.app/api/games/news',
         );
         const featured = response.data;
         isMounted && setFeaturedArticles(featured);
@@ -25,7 +25,7 @@ const Article = ({ navigation }) => {
     async function articles() {
       try {
         const response = await axios.get(
-          'https://the-lazy-media-api.vercel.app/api/search',
+          'https://the-lazy-media-api.vercel.app/api/games',
         );
         const data = response.data;
         isMounted && setArticle(data);
@@ -45,8 +45,9 @@ const Article = ({ navigation }) => {
       navigation={navigation}
       article={article}
       featuredArticles={featuredArticles}
+      name="Games"
     />
   );
 };
 
-export default Article;
+export default Games;
