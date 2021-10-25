@@ -8,6 +8,7 @@ import Article from './pages/Article';
 import SplashScreen from './pages/SplashScreen';
 import Tech from './pages/Tech';
 import Games from './pages/Games';
+import ArticleDetail from './pages/ArticleDetail';
 
 const App = () => {
   const Stack = createStackNavigator();
@@ -52,6 +53,17 @@ const App = () => {
             headerTintColor: 'white',
           }}
         />
+        <Stack.Screen
+          name="ArticleDetail"
+          component={ArticleDetail}
+          options={({route}) => ({
+              title: route.params.tag,
+              headerStyle: { backgroundColor: '#2D283e' },
+              headerTintColor: 'white',
+          })}
+          getId={({ params }) => params}
+        >
+        </Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>
   );

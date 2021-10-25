@@ -1,7 +1,7 @@
 import React from 'react';
-import { StyleSheet, Text, View, ImageBackground, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, ImageBackground, ScrollView, TouchableOpacity } from 'react-native';
 
-const FeaturedArticles = ({ data }) => {
+const FeaturedArticles = ({ data, navigation }) => {
   return (
     <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
       <View style={styles.container}>
@@ -12,13 +12,21 @@ const FeaturedArticles = ({ data }) => {
                 style={{ flex: 1 }}
                 resizeMode="cover"
                 imageStyle={{ borderRadius: 8 }}
-                source={{uri: item.thumb}}>
+                source={{ uri: item.thumb }}>
                 <Text style={styles.tag}>{item.tag}</Text>
               </ImageBackground>
             </View>
             <View>
-              <Text style={styles.title}>{item.title}</Text>
-              <Text style={styles.author}>{item.author}</Text>
+              <TouchableOpacity
+                onPress={() =>
+                  navigation.navigate('ArticleDetail', {
+                    tag: item.tag,
+                    slug: item.key,
+                  })
+                }>
+                <Text style={styles.title}>{item.title}</Text>
+                <Text style={styles.author}>{item.author}</Text>
+              </TouchableOpacity>
             </View>
           </View>
         ))}
@@ -45,14 +53,14 @@ const styles = StyleSheet.create({
   tag: {
     color: 'white',
     backgroundColor: '#2d283e',
-    width: 100,
+    width: 90,
     padding: 2,
     fontSize: 13,
     borderRadius: 15,
     borderTopLeftRadius: 0,
     borderTopRightRadius: 0,
     borderBottomLeftRadius: 0,
-    paddingBottom: 5
+    paddingBottom: 5,
   },
   title: {
     marginLeft: 20,

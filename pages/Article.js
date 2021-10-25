@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import ArticleList from '../components/ArticleList';
+import { baseUrl } from '../src/constant/baseUrl';
 
 const Article = ({ navigation }) => {
   const [article, setArticle] = useState([]);
@@ -12,7 +13,7 @@ const Article = ({ navigation }) => {
     async function featuredArticles() {
       try {
         const response = await axios.get(
-          'https://the-lazy-media-api.vercel.app/api/search?search=gam',
+          `${baseUrl}/search?search=gam`,
         );
         const featured = response.data;
         isMounted && setFeaturedArticles(featured);

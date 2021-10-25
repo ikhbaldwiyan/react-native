@@ -11,16 +11,17 @@
     "emulator": "C:/Users/User/AppData/Local/Android/Sdk/emulator/emulator -avd Pixel_2_XL_API_30"
   },
   "dependencies": {
-    "react": "17.0.2",
-    "react-native": "0.66.0",
-    "axios": "^0.21.0",
+    "@react-native-community/masked-view": "^0.1.10",
     "@react-navigation/native": "^5.7.6",
     "@react-navigation/stack": "^5.9.3",
+    "axios": "^0.21.0",
+    "react": "17.0.2",
+    "react-native": "0.66.0",
+    "react-native-gesture-handler": "^1.8.0",
     "react-native-reanimated": "^1.13.1",
     "react-native-safe-area-context": "^3.1.8",
     "react-native-screens": "^2.11.0",
-    "react-native-gesture-handler": "^1.8.0",
-    "@react-native-community/masked-view": "^0.1.10"
+    "react-native-webview": "^11.14.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
